@@ -1,0 +1,5 @@
+[
+    {"pk": 1, "model": "rpg.type", "fields": {"label": "Build"}},
+    {"pk": 2, "model": "rpg.type", "fields": {"label": "Rent"}},
+    {"pk": 3, "model": "rpg.type", "fields": {"label": "Hold"}}
+]

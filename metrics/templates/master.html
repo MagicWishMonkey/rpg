@@ -1,0 +1,59 @@
+{% load staticfiles %}
+<!doctype html>
+
+<!--[if IEMobile 7 ]> <html lang="en-US" prefix="og: http://ogp.me/ns#"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>RPG Metrics | {% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- media-queries.js (fallback) -->
+    <!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+
+    <!-- html5.js -->
+    <!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+    <meta name="description" content=""/>
+    <link rel="shortcut icon" href="{% static 'img/favicon.png'%}">
+    <link rel="canonical" href="//www.http://rpgbuilders.com//" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RPG Metrics" />
+    <meta property="og:site_name" content="RPG Metrics" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="//www.rpgbuilders.com/" />
+
+    <link rel="stylesheet" id='bootstrap' href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" id='global' href="{% static 'css/global.css'%}">
+
+    <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/utils.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+
+
+</head>
+
+<body>
+
+
+{% block page-content %}{% endblock %}
+
+<br><a href="api/properties">properties</a>
+
+{% if DEBUG == True %}
+    <script type="text/javascript">
+        //alert("debug enabled!");
+    </script>
+{% endif %}
+</body>
+</html>

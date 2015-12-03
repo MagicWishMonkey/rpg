@@ -1,0 +1,5 @@
+[
+    {"pk": 1, "model": "rpg.status", "fields": {"label": "Modern"}},
+    {"pk": 2, "model": "rpg.status", "fields": {"label": "Mediterranean"}},
+    {"pk": 3, "model": "rpg.status", "fields": {"label": "Traditional"}}
+]

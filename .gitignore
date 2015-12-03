@@ -1,0 +1,42 @@
+# IDE and other project files
+/.archive
+
+# compiled python files
+*.pyc
+*.pyo
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+
+# Ignore Mac system files
+.DS_Store
+/.DS_Store$
+
+
+# ignore IDE related files
+.idea/
+*.iml
+
+# Local files
+settings.override.json
+robots.txt
+scratch.py
+python.conf
+static/*
+media/*
+logs/*
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+
+# Local files
+/files/images
+/files/docs
+/files/movs
+/files/archives

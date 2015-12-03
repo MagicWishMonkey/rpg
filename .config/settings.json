@@ -1,0 +1,99 @@
+{
+    "ALLOWED_HOSTS": [
+        "*"
+    ],
+    "EXTERNAL_REQUEST_TIMEOUT": 30,
+    "DISABLE_NEWRELIC": false,
+    "DEBUG": false,
+    "__TEMPLATE_DEBUG": false,
+    "NEWRELIC": true,
+    "SECRET_KEY": "Ek^ish$bIrn/Yak>iT^Un]foF}hur*eUp;gEr}uV/Waip&hUk$",
+    "URI": "http://127.0.0.1:8000/",
+    "ADMINS": [
+        ["admin@gmail.com"]
+    ],
+
+    "DATABASES": {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": "rpg",
+            "USER": "rpg",
+            "PASSWORD": "wokkawokka!",
+            "HOST": "127.0.0.1",
+            "PORT": "5432"
+        }
+    },
+
+    "SMTP": {
+        "host": "localhost",
+        "port": 25,
+        "subject_prefix": " [Django] ",
+        "username": "",
+        "password": ""
+    },
+
+    "LOGGING": {
+        "disable_existing_loggers": false,
+        "formatters": {
+            "simple": {
+                "format": "%(levelname)s %(message)s"
+            },
+            "verbose": {
+                "datefmt": "%d/%b/%Y %H:%M:%S",
+                "format": "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s"
+            },
+            "syslog": {
+                "format": "severity=%(levelname)s %(asctime)s %(message)s module=%(module)s line=%(lineno)s"
+            }
+        },
+        "handlers": {
+            "error": {
+                "class": "logging.FileHandler",
+                "filename": "../logs/error.log",
+                "formatter": "verbose",
+                "level": "ERROR"
+            },
+            "access": {
+                "class": "logging.FileHandler",
+                "filename": "../logs/debug.log",
+                "formatter": "verbose",
+                "level": "DEBUG"
+            },
+            "syslog": {
+                "class": "logentries.LogentriesHandler",
+                "formatter": "syslog",
+                "level": "DEBUG",
+                "token": "REPLACE_ME"
+            }
+        },
+        "loggers": {
+            "rpg": {
+                "handlers": [
+                    "error",
+                    "access",
+                    "syslog"
+                ],
+                "level": "DEBUG"
+            },
+            "django": {
+                "handlers": [
+                    "error",
+                    "access",
+                    "syslog"
+                ],
+                "level": "DEBUG",
+                "propagate": true
+            },
+            "django.request": {
+                "handlers": [
+                    "error",
+                    "access",
+                    "syslog"
+                ],
+                "level": "DEBUG",
+                "propagate": false
+            }
+        },
+        "version": 1
+    }
+}

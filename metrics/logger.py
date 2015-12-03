@@ -1,0 +1,1 @@
+log = __import__("logging").getLogger("rpg")
